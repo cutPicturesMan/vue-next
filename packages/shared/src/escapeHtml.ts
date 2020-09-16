@@ -1,5 +1,7 @@
 const escapeRE = /["'&<>]/
 
+// TODO 弄清react中后来改用escapeHtml的原因：https://github.com/facebook/react/pull/6862
+// TODO 弄清escape-html库：https://github.com/component/escape-html
 export function escapeHtml(string: unknown) {
   const str = '' + string
   const match = escapeRE.exec(str)
